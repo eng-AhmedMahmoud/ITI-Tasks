@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Card Maker</title>
+</head>
+
+<body>
+	
+
+    <table>
+        <tr>
+            <td>
+                <img src="images/gws.jpg" width="200" />
+            </td>
+            <td>
+                <img src="images/gws2.jpg" width="200" />
+            </td>
+            <td>
+                <img src="images/gws3.jpg" width="200" />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:center">
+                <input type="radio" name="radioSelect" value="gws" checked="true">
+            </td>
+            <td style="text-align:center">
+                <input type="radio" name="radioSelect" value="gws2">
+            </td>
+            <td style="text-align:center">
+                <input type="radio" name="radioSelect" value="gws3">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/gwsf.jpg" width="200" />
+            </td>
+            <td>
+                <img src="images/gwsf2.jpg" width="200" />
+            </td>
+            <td>
+                <img src="images/gwsf3.jpg" width="200" />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:center">
+                <input type="radio" name="radioSelect" value="gwsf">
+            </td>
+            <td style="text-align:center">
+                <input type="radio" name="radioSelect" value="gwsf2">
+            </td>
+            <td style="text-align:center">
+                <input type="radio" name="radioSelect" value="gwsf3">
+            </td>
+        </tr>
+
+    </table>
+
+    <div>
+    <h3>Personal Message:</h3>
+    <textarea id="pMsg" name="pMsg" rows="10" cols="50"> </textarea><br>
+    <button type="button" id="gBtn" onclick="createCard()">Create card</button>
+    </div>
+		<script src = "cookies.js"></script>
+		<script src = "jsf.js"></script>
+
+</body>
+</html> 

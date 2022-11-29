@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1666618560 source:d:\c_projects\c_lab_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1666619328 source:d:\c_projects\c_lab_2\main3.c
+	<stdio.h>
+	<stdlib.h>
+
+1666689892 source:d:\c_projects\c_lab_2\main2.c
+	<stdio.h>
+	<stdlib.h>
+
+1666618560 source:d:\c_projects\c_lab_2\magic_box\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+

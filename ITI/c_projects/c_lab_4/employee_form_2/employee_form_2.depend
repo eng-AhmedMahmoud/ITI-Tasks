@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1666858561 source:d:\c_projects\employee_form_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+

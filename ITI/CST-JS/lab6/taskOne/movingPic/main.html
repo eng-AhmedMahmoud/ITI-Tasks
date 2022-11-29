@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MovingPic</title>
+    <style>
+        #div1{
+            border:  solid red;
+            width:500px;
+            height: 500px;
+            text-align: center;
+        }
+        #div1 > div{
+
+            position: absolute;
+           
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="div1">
+        <div id="yellow">
+         <img  src="icon1.gif"/>
+        </div>
+         <div id="purble">
+         <img  src="icon2.gif"/>
+        </div>
+         <div id="top1">
+         <img  src="TOP.JPG"/>
+        </div>
+    </div>
+
+    <br> 
+    <div>
+    <button id="btn1" type="Button" name = "go"  value="go">go</button>
+    <button id="btn2" type="Button" onclick="reset()" value="reset">reset</button>
+    </div>
+    <script src="jsf.js"></script>
+</body>

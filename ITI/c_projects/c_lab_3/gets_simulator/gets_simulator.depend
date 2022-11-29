@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1666765422 source:d:\c_projects\gets_simulator\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
