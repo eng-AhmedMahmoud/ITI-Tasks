@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:complexType name="familyInfo">
+    <xs:sequence>
+      <xs:element name="grandfather" type="grandfatherInfo" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="grandfatherInfo" mixed="true">
+    <xs:sequence>
+      <xs:element name="father" type="fatherInfo" />
+      <xs:element name="uncle" type="uncleInfo" minOccurs="1" maxOccurs="2" />
+      <xs:element name="aunt" type="auntInfo" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="fatherInfo">
+    <xs:sequence>
+      <xs:element name="mother" type="motherInfo" />
+      <xs:element name="daughter" type="daughterInfo1" />
+      <xs:element name="daughter" type="daughterInfo2" />
+      <xs:element name="son" type="sonInfo" />
+    </xs:sequence>
+    <xs:attribute name="job" type="xs:string" />
+    <xs:attribute name="name" type="xs:string" />
+  </xs:complexType>
+
+  <xs:complexType name="motherInfo">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="daughterInfo1" mixed="true">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attributeGroup ref="daughterAttributes"></xs:attributeGroup>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="daughterInfo2" mixed="true">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" />
+      <xs:element name="child" type="xs:string" />
+    </xs:sequence>
+    <xs:attributeGroup ref="daughterAttributes"></xs:attributeGroup>
+  </xs:complexType>
+
+  <xs:attributeGroup name="daughterAttributes">
+    <xs:attribute name="age" type="xs:string" />
+    <xs:attribute name="job" type="xs:string" />
+  </xs:attributeGroup>
+
+  <xs:attributeGroup name="sonAttributes">
+    <xs:attribute name="age" type="xs:string" />
+    <xs:attribute name="sport" type="xs:string" />
+  </xs:attributeGroup>
+
+  <xs:complexType name="sonInfo">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attributeGroup ref="sonAttributes"></xs:attributeGroup>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="uncleInfo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="abd el fatah" />
+      <xs:enumeration value="reda" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="auntInfo">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="sons" type="xs:integer" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:element name="family" type="familyInfo"></xs:element>
+</xs:schema>
