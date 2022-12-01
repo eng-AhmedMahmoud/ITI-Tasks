@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "xslt-js",
+      "label": "first Task",
+      "xsltFile": "${workspaceFolder}/Task2/cd_catalog.xsl",
+      "xmlSource": "${workspaceFolder}/Task2/cd_catalog2.xml",
+      "resultPath": "${workspaceFolder}/Task2/cd_catalog.html",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$saxon-xslt-js"]
+    }
+  ]
+}

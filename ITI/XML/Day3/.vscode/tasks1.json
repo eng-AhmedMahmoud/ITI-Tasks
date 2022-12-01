@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "xslt-js",
+      "label": "first Task",
+      "xsltFile": "${workspaceFolder}/Task1/test.xsl",
+      "xmlSource": "${workspaceFolder}/Task1/prg7.xml",
+      "resultPath": "${workspaceFolder}/Task1/prg7.html",
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "problemMatcher": ["$saxon-xslt-js"]
+    }
+  ]
+}
