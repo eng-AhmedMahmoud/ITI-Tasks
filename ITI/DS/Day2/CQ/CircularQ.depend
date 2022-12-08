@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1670412596 source:d:\d\iti\courses\9ds\day2\lect\temp\temp\main.cpp
+	<iostream>
+	"Stack.h"
+
+1670412714 d:\d\iti\courses\9ds\day2\lect\temp\temp\include\stack.h
+
+1670440146 source:d:\i t i\ds\temp\main.cpp
+	<iostream>
+	"Queue.h"
+
+1670439724 d:\i t i\ds\temp\include\queue.h
+	<iostream>
+
