@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1670528410 source:d:\i t i\ds\day 3\day3sort\main.cpp
+	<iostream>
+	"LinkedList.h"
+
+1670528514 d:\i t i\ds\day 3\day3sort\include\linkedlist.h
+	<iostream>
+	"Node.h"
+
+1670512439 d:\i t i\ds\day 3\day3sort\include\node.h
+
