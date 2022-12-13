@@ -7,8 +7,7 @@ var interval;
 
 function onOut(){
     interval = setInterval(function(){
-        if(i >= images.length -1 )
-            i = -1;
+        if(i >= images.length -1 ) i = -1;
         i++;
         // console.log(i);
         document.getElementsByTagName("img")[i].src = "./marbels/marble3.jpg";

@@ -4,7 +4,7 @@ function show() {
   counter = parseInt(getcookie("counter"))
   setcookie("counter", ++counter, d);
   var username = getcookie("name");
-  console.log(username);
+  // console.log(username);
   var color = getcookie("color");
   var gender = getcookie("gender");
   document.getElementsByTagName("img")[0].src = gender == "male" ? "1.jpg" : "2.jpg";
@@ -13,4 +13,4 @@ function show() {
 
 function init() {
   show();
-w}
+}
