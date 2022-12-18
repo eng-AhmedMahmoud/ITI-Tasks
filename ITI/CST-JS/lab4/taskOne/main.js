@@ -1,4 +1,4 @@
-// get user's name query string
+// get user's query string data
 var queryString = window.location.search;
 var userData = queryString.substring(1).split("&");
 var Data = userData.join(" ").split("=").join(" ").split(' ');
