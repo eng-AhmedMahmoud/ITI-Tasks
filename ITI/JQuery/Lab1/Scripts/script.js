@@ -15,7 +15,6 @@ $(function () {
   })
   var i = 1;
   var images = $(".img");
-  console.log(images[0])
   $("#right").click(function () {
     if (i >= images.length) i = 0;
     i++;
@@ -40,6 +39,7 @@ $(function () {
     $("#gallery-container").css({ "display": "none" });
     $(".dropdown-content").css({ "display": "none" });
     $("#complain-container").slideToggle();
+    $("#complain-result").hide();
   });
   $("#send").click(function () {
     $("#span-name").html(" " + $("#name").val());
