@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <link href="../Styles/style.css" rel="stylesheet" type="text/css" /> -->
+  <link rel="stylesheet" href="../Styles/image-zoom.css">
+  <link rel="stylesheet" href="../Styles/style2.css">
+  <script src="../Libraries/jqueryDevMin.js"></script>
+  <script src="../Libraries/jquery-ui.min.js"></script>
+  <script src="../Libraries/image-zoom-plugin.js"></script>
+</head>
+
+<body>
+<section id="main">
+  <div class="inner">
+    <h1>Image Zoom</h1>
+
+    <div class="image-container">
+      <img id="imageZoom" src="https://picsum.photos/1080/720" alt="A image to apply the ImageZoom plugin">
+    </div>
+
+  </div>
+</section>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#imageZoom').imageZoom();
+  });
+</script>
+</body>
+
+</html>
