@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>color change</title>
+</head>
+
+<body>
+  Red: <input type="range" name="red" id="red" min="0" max="9" value="0"><br><br>
+  Green: <input type="range" name="green" id="green" min="0" max="9" value="0"><br><br>
+  Blue: <input type="range" name="blue" id="blue" min="0" max="9" value="0">
+  <h2>Change the three color ranges above and observe my color change</h2>
+
+  <script>
+    let colors = document.getElementsByTagName("input");
+    for (let i = 0; i < colors.length; i++) {
+      var redVal;
+      var greenVal;
+      var blueVal;
+      if (colors[i].id == "red") {
+          colors[i].addEventListener("input", function () {
+          redVal = this.value * 25;
+          document.getElementsByTagName("h2")[0].style.color = "rgb(" + redVal + ",0,0)";
+        });
+      }else if(colors[i].id == "green"){
+        colors[i].addEventListener("input", function () {
+          greenVal = this.value * 25;
+          document.getElementsByTagName("h2")[0].style.color = "rgb("+ redVal +"," + greenVal + ",0)";
+        });
+      }else if(colors[i].id == "blue"){
+        colors[i].addEventListener("input", function () {
+          blueVal = this.value * 25;
+          document.getElementsByTagName("h2")[0].style.color = "rgb("+ redVal +"," + greenVal + "," + blueVal + ")";
+          console.log("rgb("+ redVal +"," + greenVal + "," + blueVal + ")");
+        });
+      };
+    }
+  </script>
+</body>
+
+</html>
