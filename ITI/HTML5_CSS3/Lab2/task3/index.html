@@ -14,15 +14,14 @@
   <script>
     var canvas = document.getElementById("halfCircle");
     var ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(250, 250, 200, 0, Math.PI, true);
+    ctx.stroke();
+    ctx.fillStyle = "yellow";
+    ctx.fill();
     let interval = setInterval(function () {
-      ctx.beginPath();
-      ctx.arc(250, 250, 200, 0, Math.PI, true);
-      ctx.stroke();
-      ctx.fillStyle = "yellow";
-      ctx.fill();
-      var flag = true;
-      if (flag) {
-        //flip the arc
+        
+      //flip the arc
         ctx.translate(250, 250);
         ctx.rotate(Math.PI);
         ctx.translate(-250, -250);
@@ -34,16 +33,7 @@
         ctx.stroke();
         ctx.fillStyle = "yellow";
         ctx.fill();
-      } else {
-        //delete arc
-        ctx.clearRect(0, 0, 500, 500);
-        //draw the arc again
-        ctx.beginPath();
-        ctx.arc(250, 250, 200, 0, Math.PI, true);
-        ctx.stroke();
-        ctx.fillStyle = "yellow";
-        ctx.fill();
-      }
+      
     }, 500);
     setTimeout(function(){
       ctx.beginPath();
