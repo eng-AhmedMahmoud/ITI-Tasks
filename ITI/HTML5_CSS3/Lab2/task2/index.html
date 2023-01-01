@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pythagoras</title>
+</head>
+</head>
+<script src="conditionizr-4.4.0/conditionizr-4.4.0/dist/conditionizr.js"></script>
+<script src="conditionizr-4.4.0/conditionizr-4.4.0/detects/chrome.js"></script>
+<script src="conditionizr-4.4.0/conditionizr-4.4.0/detects/firefox.js"></script>
+<script>
+  conditionizr.load("../MathPoly.js", ["chrome"])
+  conditionizr.load("../MathPoly.css", ["chrome"])
+</script>
+<body>
+  <!-- pythagoras red Triangle using canvas-->
+  <canvas id="pythagoras" width="500" height="460" style="border: transparent; margin-left: 40px;">
+  </canvas>
+  <p><b>according to pythagoras theorem</b></p>
+  <!-- MathMl pythagoras equation -->
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
+    <mrow>
+      <msup>
+        <mi>c</mi>
+      </msup>
+      <mo>=</mo>
+      <msqrt>
+        <msup>
+          <mi>a</mi>
+          <mn>2</mn>
+        </msup>
+        <mo>+</mo>
+        <msup>
+          <mi>b</mi>
+          <mn>2</mn>
+        </msup>
+      </msqrt>
+    </mrow>
+  </math>
+  <script>
+    var canvas = document.getElementById("pythagoras");
+    var ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.moveTo(200, 0);
+    ctx.lineTo(200, 400);
+    ctx.lineTo(0, 400);
+    ctx.lineTo(200, 0);
+    ctx.stroke();
+    ctx.fillStyle = "red";
+    ctx.fill();
+    //write c, a , b on lines
+    ctx.font = "20px Arial";
+    ctx.fillStyle = "black";
+    ctx.fillText("c", 80, 160);
+    ctx.fillText("a", 100, 430);
+    ctx.fillText("b", 220, 250);
+  </script>
+</body>
+</html>

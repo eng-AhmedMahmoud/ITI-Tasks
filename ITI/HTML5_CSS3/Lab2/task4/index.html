@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>line animation</title>
+</head>
+
+<body>
+  <!-- line animation from right-top to left-bottom canvas corner -->
+  <canvas id="lineAnimation" width="500" height="500" style="border: 2px dashed #000; margin-left: 40px;">
+  </canvas>
+  <script>
+    var canvas = document.getElementById("lineAnimation");
+    var ctx = canvas.getContext("2d");
+    //setInterval animation
+    var i = 0;
+    let interval = setInterval(function () {
+      i = i + 10
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(i, i);
+      ctx.lineWidth = 3
+      ctx.strokeStyle = "red";
+      ctx.stroke();
+      if (i == 510) {
+        alert("Animation Finished");
+      }
+    }, 100);
+    //setTimeOut animation
+    setTimeout(function () {
+      clearInterval(interval);
+    }, 5200);
+  </script>
+</body>
+
+</html>
