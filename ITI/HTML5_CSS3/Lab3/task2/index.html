@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- CANVAS -->
+  <canvas id="myCanvas" width="500" height="500" style="border: transparent; margin-left: 40px;">
+  </canvas>
+  <script>
+    //circle with letter N inside
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    //blue circle with white gradient
+    ctx.beginPath();
+    ctx.arc(270, 250, 200, 0, 2 * Math.PI);
+    ctx.stroke();
+    var grd = ctx.createRadialGradient(270, 250, 200, 290, 150, 0);
+    grd.addColorStop(0, "blue");
+    grd.addColorStop(1, "white");    
+    ctx.fillStyle = grd;
+    ctx.fill();
+    ctx.closePath();
+    //blue circle with white gradient
+    ctx.beginPath();
+    ctx.arc(270, 250, 150, 0, 2 * Math.PI);
+    ctx.stroke();
+    var grd = ctx.createRadialGradient(270, 250, 150, 370, 470, 0);
+    grd.addColorStop(0, "blue");
+    grd.addColorStop(1, "white");    
+    ctx.fillStyle = grd;
+    ctx.fill();
+    ctx.closePath();
+    //letter N white
+    ctx.beginPath();
+    ctx.fillStyle = "white";
+    ctx.font = "200px Arial";
+    ctx.fillText("N", 200, 300);
+    ctx.closePath();
+  </script>
+</body>
+</html>
