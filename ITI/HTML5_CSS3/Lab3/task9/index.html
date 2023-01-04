@@ -2,11 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible"e content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    #circle{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+    #mouse{
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      position: absolute;
+      top: 50px;
+      left: 120px;
+      transform: rotate(45deg);
+    }
+  </style>
 </head>
 <body>
-
+  <div id="circle"></div>
+  <div id="mouse"></div>
+  <script>
+    let circle = document.getElementById('circle');
+    let mouse = document.getElementById('mouse');
+    let interval = setInterval(function(){
+      if(mouse.style.display == "block"){
+        mouse.style.display = "none";
+      }else{
+        mouse.style.display = "block";
+      }
+    },200)
+    setTimeout(function(){
+      clearInterval(interval);
+    },5000)
+  </script>
 </body>
 </html>

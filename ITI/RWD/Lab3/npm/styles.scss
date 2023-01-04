@@ -1,0 +1,22 @@
+$primary:pink;
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+@each $color,$val in $colors{
+    .btn-#{$color}{
+        background-color: $val !important;
+    }
+    .bg-#{$color}{
+        background-color: $val !important;
+    }
+
+}
+@each $color,$val in $reds{
+    .btn-#{$color}{
+        background-color: $val !important;
+    }
+    .bg-#{$color}{
+        background-color: $val !important;
+    }
+
+}
