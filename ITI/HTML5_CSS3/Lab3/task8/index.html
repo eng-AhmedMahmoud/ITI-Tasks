@@ -25,9 +25,9 @@
       background-color: #000;
       height: 50px;
       width: 50px;
-      position: relative;
-      top: 180px;
-      left: 100px;
+      position: absolute;
+      top: 220px;
+      left: 150px;
       transform: rotate(45deg);
     }
     .shape::before {
@@ -37,25 +37,63 @@
       height: 50px;
       width: 50px;
       position: absolute;
-      top: 50px;
-      left: -10px;
+      top: 28px;
+      left: 0px;
     }
     .shape::after {
       content: "";
-      background-color: #0f0;
+      background-color: #000;
       border-radius: 50%;
       height: 50px;
       width: 50px;
       position: absolute;
+      top: 0px;
+      left: 28px;
+    }
+    #top {
+      position: absolute;
       top: 10px;
-      left: 30px;
+      left: 50px;
+      font-size: 60px;
+      color: #000;
+    }
+    #bottom {
+      position: absolute;
+      top: 400px;
+      left: 250px;
+      font-size: 60px;
+      color: #000;
+    }
+    .Triangle {
+      content: "";
+      width: 50px;
+      background-color: #000;
+      position: absolute;
+      top: 288px;
+      left: 150px;
+      transform: rotate(45deg);
+      border: none;
+    }
+    .Triangle2 {
+      content: "";
+      background-color: #fff;
+      position: absolute;
+      top: 288px;
+      left: 150px;
+      border-right: 50px solid transparent;
+      border-bottom: 50px solid #000;
+      transform: rotate(135deg);
     }
   </style>
 </head>
 <body>
   <!-- Ace Card -->
   <div class="card" style="width: 18rem;">
+    <h1 id="top">A</h1>
     <div class="shape"></div>
+    <div class="Triangle"></div>
+    <div class="Triangle2"></div>
+    <h1 id="bottom">A</h1>
   </div>
 </body>
 </html>
