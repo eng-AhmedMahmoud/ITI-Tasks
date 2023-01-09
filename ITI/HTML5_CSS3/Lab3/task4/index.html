@@ -10,27 +10,37 @@
   <!-- CANVAS -->
   <canvas id="canvas" width="500" height="500" style="border: transparent; margin-left: 40px;">
   </canvas>
-  <script src="script.js"></script>
   <script>
-    /*//blue rectangle
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-    //begin path
-    ctx.beginPath();
-    ctx.fillStyle = "blue";
-    ctx.globalAlpha = 0.5;
-    ctx.fillRect(250, 250, 50, 150);
-    ctx.closePath();
-    
-    ctx.beginPath();
-    ctx.fillStyle = "blue";
-    //opacity 0.5
-    ctx.globalAlpha = 0.5;
-    ctx.rotate(10 * Math.PI / 180);
-    ctx.fillRect(250, 200, 50, 150);
-    //rotate 45 degrees
-    ctx.closePath();
-   */
+    var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+
+      var startX = 250;
+      var startY = 250;
+
+      ctx.beginPath();
+      ctx.rect(startX, startY, 100, 20);
+      ctx.fillStyle = "transparent";
+      ctx.fill();
+
+
+      var angle = 0;
+      setInterval(function () {
+        drawRect(startX, startY, 100, 20, angle);
+        angle += 15;
+      }, 500)
+
+      function drawRect(x, y, width, height, degrees) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.translate(x + width / 2, y + height / 2);
+        ctx.rotate(degrees * Math.PI / 180);
+        ctx.rect(-width, -height / 2, width, height);
+
+        ctx.fillStyle = "blue";
+        ctx.globalAlpha = 0.5;
+        ctx.fill();
+        ctx.restore();
+      }
   </script>
 </body>
 </html>
