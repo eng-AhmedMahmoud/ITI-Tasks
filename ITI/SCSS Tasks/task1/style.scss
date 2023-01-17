@@ -1,0 +1,65 @@
+$primary: gold; 
+$secondary: #f4f4f4;
+$background-dark: #1a1a1a;
+$gray: #666;
+$black: #000;
+
+body{
+  background-color: $background-dark;
+  font-family: sans-serif;
+}
+.main{
+  h1{
+    color: $primary;
+  }
+  p{
+    color: $secondary;
+  }
+  button{
+    background-color: $primary;
+    &:hover{
+      background-color: $secondary;
+    }
+  }
+}
+
+$font-size: 18px, 16px, 14px;
+
+@each $size in $font-size{
+  .font-#{$size}{
+    font-size: $size;
+    color: $gray;
+  }
+}
+
+.finish-btn{
+  border: 2px solid $primary;
+  background-color: $primary;
+  color: $black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20px;
+  &:hover{
+    background-color: $black;
+    color: $primary;
+  }
+}
+
+@media (min-width: 576px){
+  .finish-btn{
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px){
+  body{
+    text-align: center;
+  }
+  .finish-btn{
+    width: 100%;
+  }
+}

@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  &-fluid {
+    max-width: 100%;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form {
+  background-color: #f4f4f4;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+@mixin gridcreator($numofcols: 12, $screenname: "", $brekpoint: 0px) {
+  @if ($screenname == "") {
+    @media all and (min-width: $brekpoint) {
+      @for $i from 1 through $numofcols {
+        .col-#{$i} {
+          width: 100/ ($numofcols/$i) * 1%;
+        }
+      }
+    }
+  } @else {
+    @media all and (min-width: $brekpoint) {
+      @for $i from 1 through $numofcols {
+        .col-#{$screenname}-#{$i} {
+          width: 100/ ($numofcols / $i) * 1%;
+        }
+      }
+    }
+  }
+}
+
+@include gridcreator(12, "", 0px);
+@include gridcreator(12, "sm", 576px);
+@include gridcreator(12, "md", 768px);
+@include gridcreator(12, "lg", 992px);
+@include gridcreator(12, "xl", 1200px);
+@include gridcreator(12, "xxl", 1600px);
