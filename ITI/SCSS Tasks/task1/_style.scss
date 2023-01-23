@@ -12,8 +12,7 @@
 
 /* comment will appear in  css */
 
-
-/*! comment will appear in  css and min.css */
+/* //!comment will appear in  css and min.css */
 
 //& nesting ==> don't go more than 4 levels
 @import "./colors";
@@ -35,7 +34,7 @@
         width: 100%;
         margin: 0px;
         &:hover {
-            background-color: orange;
+            background-color: #f48b3ae1;
         }
     }
 }
