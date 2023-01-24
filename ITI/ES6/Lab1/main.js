@@ -2,11 +2,13 @@
 //swap x and y using destructuring
 let x = 1;
 let y = 2;
+console.log(x, y);
 
 [x, y] = [y, x];
 console.log(x, y);
 
 //& Task2
+console.log("*".repeat(10));
 //using rest parameter and spread operator to get the max value and min value
 function getMaxMin(...args) {
   console.log("min value is: " + Math.min(...args));
@@ -16,6 +18,7 @@ getMaxMin(1, 2, 3, 4, 5);
 
 
 //& Task3
+console.log("*".repeat(10));
 // fruits array
 var fruits = ["apple", "strawberry", "banana", "orange", "mango"];
 
