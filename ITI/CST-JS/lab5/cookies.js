@@ -15,7 +15,7 @@ function getcookie(cName) {
         }
         if (c.indexOf(cnam) == 0) {
             return c.substring(cnam.length, c.length);
-            console.log(c.substring(cnam.length, c.length));
+            // console.log(c.substring(cnam.length, c.length));
         }
     }
     return "";

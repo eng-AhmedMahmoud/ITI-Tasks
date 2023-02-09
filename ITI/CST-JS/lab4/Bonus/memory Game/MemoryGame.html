@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 2em;
+        }
+
+        .card {
+            height: 110px;
+            width: 90px;
+            background-color: purple;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            transition: 0.3s all ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            width: 80%;
+            max-height: 90px;
+            opacity: 0;
+            transition: 0.3s all ease;
+        }
+
+        .card.clicked {
+            background-color: orange;
+        }
+
+        .card.checked {
+            background-color: lightgreen;
+        }
+
+        .card.clicked img,
+        .card.checked img {
+            opacity: 1;
+        }
+
+        .card.shake {
+            background-color: #f15f5f;
+            animation: shake 0.5s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Memory Game</h2>
+        <div class="cards">
+            <div class="card" animal="duck">
+                <img src="duck.png" />
+            </div>
+            <div class="card" animal="cat">
+                <img src="cat.png" />
+            </div>
+            <div class="card" animal="lion">
+                <img src="lion.png" />
+            </div>
+            <div class="card" animal="jaguar">
+                <img src="jaguar.png" />
+            </div>
+            <div class="card" animal="panther">
+                <img src="panther.png" />
+            </div>
+            <div class="card" animal="dog">
+                <img src="dog.png" />
+            </div>
+            <div class="card" animal="snake">
+                <img src="snake.png" />
+            </div>
+            <div class="card" animal="tiger">
+                <img src="tiger.png" />
+            </div>
+            <div class="card" animal="lion">
+                <img src="lion.png" />
+            </div>
+            <div class="card" animal="cat">
+                <img src="cat.png" />
+            </div>
+            <div class="card" animal="snake">
+                <img src="snake.png" />
+            </div>
+            <div class="card" animal="duck">
+                <img src="duck.png" />
+            </div>
+            <div class="card" animal="panther">
+                <img src="panther.png" />
+            </div>
+            <div class="card" animal="dog">
+                <img src="dog.png" />
+            </div>
+            <div class="card" animal="tiger">
+                <img src="tiger.png" />
+            </div>
+            <div class="card" animal="jaguar">
+                <img src="jaguar.png" />
+            </div>
+        </div>
+    </div>
+    <script>
+        let counter = 0;
+        let firstSelection = "";
+        let secondSelection = "";
+        
+        const cards = document.querySelectorAll(".cards .card");
+        cards.forEach((card) => {
+            card.addEventListener("click", () => {
+                if(card.classList.contains("clicked")){
+                    return;
+                }
+                else if(counter === 0) {
+                    card.classList.add("clicked");
+                    firstSelection = card.getAttribute("animal");
+                    counter++;
+                } else {
+                    card.classList.add("clicked");
+                    secondSelection = card.getAttribute("animal");
+                    counter = 0;
+
+                    const correctCards = document.querySelectorAll(
+                        ".card[animal='" + firstSelection + "']"
+                    );
+                    if (firstSelection === secondSelection ) {
+                            correctCards[0].classList.remove("clicked");
+                            correctCards[0].classList.add("checked");
+                            correctCards[1].classList.remove("clicked");
+                            correctCards[1].classList.add("checked");
+                        
+                    } else{
+                        const incorrectCards = document.querySelectorAll(".card.clicked");
+
+                        incorrectCards[0].classList.add("shake");
+                        incorrectCards[1].classList.add("shake");
+
+                        setTimeout(() => {
+                            incorrectCards[0].classList.remove("shake");
+                            incorrectCards[0].classList.remove("clicked");
+                            incorrectCards[1].classList.remove("shake");
+                            incorrectCards[1].classList.remove("clicked");
+                        }, 800);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
