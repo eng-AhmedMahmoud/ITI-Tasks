@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body style="height: 100%;" class="row align-items-center">
+    <div class="container">
+        <form method="POST" action="http://127.0.0.1:7003" class="w-75 m-auto bg-info p-5 rounded-3">
+            <h3 class="text-center mb-4 text-white">Please Enter Your Credentials</h3>
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Mobile</label>
+                <input type="tel" class="form-control" name="mobile">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Address</label>
+                <textarea class="form-control" name="addr"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mt-4">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
+

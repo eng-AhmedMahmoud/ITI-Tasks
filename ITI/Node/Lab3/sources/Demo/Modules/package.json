@@ -1,0 +1,16 @@
+{
+  "name": "umdui43smart",
+  "version": "1.2.3",
+  "description": "test umd at nodejs",
+  "main": "myModule.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "umd",
+    "nodejs",
+    "express"
+  ],
+  "author": "ui43",
+  "license": "ISC"
+}
