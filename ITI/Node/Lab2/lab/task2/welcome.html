@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container h-75 row m-auto ">
+        <div class="text-white row gap-5 h-100">
+            <div class="mt-5 bg-dark col p-5 rounded-3 h-100">
+                <div>
+                    <h1 class="display-4">Welcome {clientName}!</h1>
+                    <hr class="my-4">
+                    <p class="lead">Your entered data is as follows:</p>
+                    <ul>
+                        <li>MobileNumber: {MobileNumber}</li>
+                        <li>Email: {Email}</li>
+                        <li>Address: {Address}</li>
+                    </ul>
+                </div>
+                <button type="submit" class="btn btn-light w-100 mt-5">Get All Records!</button>
+            </div>
+            <div class="col-4 bg-secondary mt-5 rounded-3 p-3 row flex-column h-100">
+                <h4 class="text-center">All Records(50)</h4>
+                <hr>
+                <div id="records" style="overflow-y: scroll; height: 80%;" class="flex-fill"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script>
+        //Ajax call to get all records
+        $(document).ready(function () {
+            $(".col-4").hide()
+            $("button").click(function () {
+                $("#records").empty()
+                $(".col-4").fadeIn(200)
+                $.ajax({
+                    url: 'http://127.0.0.1:7000/clients.json',
+                    method: "GET",
+                    dataType: 'json',
+                    success: function (data) {
+
+                        $("h4").text(`All Records(${data.length})`)
+                        $("#records").empty()
+                        $.each(data, function (index, record) {
+                            $('#records').append('<h6>Record ' + (index + 1) +
+                                '</h6>');
+                            $('#records').append('<li>Name: ' + record.name +
+                                '</li>');
+                            $('#records').append('<li>Mobile: ' + record.mobile +
+                                '</li>');
+                            $('#records').append('<li>Email: ' + record.email +
+                                '</li>');
+                            $('#records').append('<li>Address: ' + record.addr +
+                                '</li>');
+                            $('#records').append('<hr></hr>');
+                        });
+
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(`xhr`, xhr);
+                        console.log(`status`, status);
+                        console.log(`error`, error);
+                    }
+                });
+            })
+        });
+    </script>
+</body>
+
+</html>
