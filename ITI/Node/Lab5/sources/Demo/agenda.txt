@@ -1,0 +1,9 @@
+1- End-Point [Students [GetAS, GetSID - Create-Update-delete] - Courses] ===> swagger
+2- Validation [ajv] [another json schema validator] [npm i ajv]
+3- MVC [Models[DB(Class)] - Views[Front] - Controllers[Between Views & Models]]
+4- Utils[Helpers] [Validations] || [Routers] [/api/students]
+5- JWT [Json Web Token] [npm i jsonwebtoken]
+6- Authentication [Reg - Login] vs Autherization[Permisions]
+7- Hash Passward [bcrypt] [npm i bcrypt]
+
+*** time ==> moment [npm i moment] ===> moment.format("") // h,m,s,d,M,Y
