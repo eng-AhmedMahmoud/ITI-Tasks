@@ -1,0 +1,35 @@
+<!-- <div style="border: 1px solid black;">
+  <app-second></app-second>
+</div> -->
+<h1>This is first Component</h1>
+<p>4+4={{4+4}}</p>
+<!-- <input type="text" placeholder="Name" value="Ahmed"/> -->
+<input type="text" placeholder="Name" value="name"/>
+<input type="text" placeholder="Name" value="{{name}}"/>
+<p>{{name}}</p>
+<!--One Way Binding [From TS to HTML]-->
+<input type="text" placeholder="Name" [value]="name"/>
+
+<img src="https://images.unsplash.com/photo-1678951601288-524157c42876?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"/>
+
+<img src="../../../assets/Images/1.jpg"/>
+<img src="assets/Images/1.jpg"/>
+<img [src]="srcImage" (mouseover)="mousOver()"/>
+
+<input type="button" value="Change" (click)="chg()"/>
+
+<br><br><br><br><br><br><br><br>
+
+<!--Two Way Binding-->
+<!-- 1) by us-->
+<input type="text" placeholder="Enter First Name" [value]="fName" (input)="getFName($event)"/>
+<p>fName: {{fName}}</p>
+
+<br><br><br><br><br><br><br>
+<!-- 2) by angular-->
+<!--FormsModule at app.module.ts ==> imports-->
+<!--Works Only With value attr-->
+<input type="text" placeholder="Enter Last Name" [(ngModel)]="lName"/>
+<p>LastName: {{lName}}</p>
+
+

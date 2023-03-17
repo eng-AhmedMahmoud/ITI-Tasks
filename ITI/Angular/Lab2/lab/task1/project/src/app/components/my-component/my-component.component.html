@@ -1,0 +1,11 @@
+<!-- two way binding input form-->
+
+<form>
+  <!-- ngModel won't work without a name attr -->
+  <input type="text" name="ahmed" placeholder="Enter your name" [(ngModel)]="Name">
+  <p>Hello {{Name}}</p>
+  <br><br><br>
+  <input placeholder="Enter your name" [value]="Name" (input)="chg($event)">
+  <p>Hello {{Name}}</p>
+</form>
+
