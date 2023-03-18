@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
 })
 export class MyComponentComponent {
   Name = "";
-  lName = "";
   chg = (e:any) => {
     this.Name = e.target.value;
+  }
+  reset = (e:any) => {
+    this.Name = "";
   }
 }
