@@ -1,0 +1,22 @@
+<h1>Registration Form</h1>
+<div class="form">
+  <input type="text" placeholder="Enter ur Name" name="name" [(ngModel)]="name" />
+  <div style="color: red; text-align: center" *ngIf="name.length < 3 && name">
+    <p>Name &gt; 3</p>
+  </div>
+  <input type="number" placeholder="Enter ur Age" name="age" [(ngModel)]="age" />
+  <div *ngIf="age<20 || age>40 then falseBlock else trueBlock">
+  </div>
+  <ng-template #falseBlock>
+    <div style="color: red; text-align: center" *ngIf="age && age>=0">
+      <p>Age Not Valid</p>
+    </div>
+  </ng-template>
+  <ng-template #trueBlock>
+    <div style="color: green; text-align: center" *ngIf="age">
+      Age Valid
+    </div>
+  </ng-template>
+  <input type="button" value="ADD" (click)="AddStudent()" />
+</div>
+

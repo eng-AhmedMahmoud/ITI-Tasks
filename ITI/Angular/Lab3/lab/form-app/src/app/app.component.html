@@ -1,0 +1,8 @@
+<!-- my app -->
+
+<!-- sending data -->
+<app-reg (sendData) = "getStudentData($event)"></app-reg>
+<!-- getting data -->
+<app-students [Students] = "regData"></app-students>
+
+<p>{{regData}}</p>

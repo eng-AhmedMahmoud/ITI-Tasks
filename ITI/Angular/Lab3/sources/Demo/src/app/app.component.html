@@ -1,0 +1,30 @@
+<!-- <h1 style="color: brown;">Hiii</h1> -->
+<!-- <app-first></app-first> -->
+<!-- <app-second></app-second> -->
+
+<!--
+  Create New Component [ur Hand - command]
+  CSS
+  TS, Html
+-->
+
+
+<!--Day3-->
+<!-- <app-all-in-one></app-all-in-one> -->
+<!--Component Interaction-->
+
+<div>
+  <h1>Parent</h1>
+  <p>Data: {{DataParent}}</p>
+
+  <!--From Parent To Child [Prop]="Parent"-->
+  <app-home [DataFromParent]="DataFromLogin" [DataAly]="'Aly'"></app-home>
+  <!--From Child To Parent (event)="fun($event)"-->
+  <app-login (myEvent)="getData($event)"></app-login>
+
+  <p>Data: {{DataFromLogin}}</p>
+</div>
+
+
+<!-- <input type="text" [value]="name"/> -->
+<!-- <input type="text" [value]="name" (input)="getData($event)"/> -->
