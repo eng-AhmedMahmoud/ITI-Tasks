@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Untitled Document</title>
+    <style>
+        #div1 {
+            width: 150px;
+            height: 150px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+   <a href="http://www.google.com" id="a1">google</a>
+    <div id="div1">
+        <input type="button" value="click" id="btn1">
+        <input type="button" value="click" id="btn2">
+
+    </div>
+    <script>
+        document.getElementById("a1").addEventListener("click",function(){
+            console.log(event.type);
+            console.log("anchor tag");
+            event.preventDefault();
+        })
+        document.onkeypress=function(){
+            
+            console.log(eventode);
+            console.log(event.altKey);
+            console.log(event.ctrlKey);
+            console.log(event.shiftKey);
+            
+            
+            
+        }
+         document.getElementById("btn2").addEventListener("click", function() {
+            console.log("button2 click event1");
+             event.stopImmediatePropagation();
+             event.target.value="stop"
+             console.log(this.value)
+
+        }, false);
+        
+        document.getElementById("btn2").addEventListener("click", function() {
+            console.log("button2 click event2");
+             event.stopPropagation();
+
+        }, false);
+        
+        document.getElementById("btn1").addEventListener("click", function() {
+            console.log("button click event");
+            event.stopPropagation();
+
+        });
+        document.getElementById("div1").addEventListener("click", function() {
+            console.log("div click event");
+            event.stopPropagation();
+
+        });
+
+        //document.getElementById("btn1").onclick = function() {
+        //    console.log("button click event");
+        //}
+
+        //document.getElementById("div1").onclick = function() {
+        //    console.log("div click event");
+        //}
+    </script>
+    
+    <script src="script.js"></script>
+
+</body></html>

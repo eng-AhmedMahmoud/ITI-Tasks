@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Untitled Document</title>
+
+</head>
+
+<body>
+   <input type="button" value="  1  " onclick="printValue(this)">
+   <input type="button" value="  2  " onclick="printValue(this)">
+   <input type="button" value="  3  " onclick="printValue(this)">
+   <input type="text" value="" id="txt">
+   
+    <select id="menu" multiple size="3">
+        <option value="o1">option#1</option>
+        <option value="o2">option#2</option>
+        <option value="o3">option#3</option>
+        <option value="o4">option#4</option>
+        <option value="o5">option#5</option>
+        <option value="o6">option#6</option>
+        <option value="o7">option#7</option>
+
+    </select>
+    <input type="button" onclick="displaySel()" value="display">
+    <input type="text" onfocus="select()" value="abc" oninput="displayContent(this)">
+    <div id="div1"></div>
+    <script>
+        function printValue(val){
+            var txtElem= document.getElementById("txt")
+            txtElem.value+=val.value.trim()
+            
+            
+            
+        }
+        function displaySel() {
+            var txt=""
+            var sel=document.getElementById("menu");
+            /*var idx=sel.selectedIndex
+            console.log("text "+sel.options[idx].text)
+            console.log("value "+sel.options[idx].value)
+*/
+            for(i=0;i<sel.options.length;i++){
+                if(sel.options[i].selected)
+                    txt+=sel.options[i].text+"   "
+                
+            }
+            document.getElementById("div1").innerHTML=txt
+            
+            
+
+        }
+
+
+        function displayContent(txt) {
+            document.getElementById("div1").innerHTML = txt.value
+
+
+
+        }
+    </script>
+
+</body></html>

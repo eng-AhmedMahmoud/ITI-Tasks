@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Untitled Document</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1 id="h1id"><u>Heading#1</u></h1>
+    <input type="button" onclick="changeHeader()" value="change">
+    <form>
+        <input type="text" name="usrnm" placeholder="name">
+        <input type="password" name="usrpswd" placeholder="password">
+        <input type="submit">
+
+
+
+
+    </form>
+
+    <script>
+        var h1var = document.getElementById("h1id");
+        console.log(document.getElementById("h1id").innerText)
+
+        function changeHeader() {
+            h1var.innerHTML="<u>abc</u>"
+
+
+        }
+    </script>
+
+
+
+
+
+
+
+
+</body></html>

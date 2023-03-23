@@ -1,0 +1,40 @@
+/* h1+h2{
+    color: red;
+    text-align: center;
+} */
+
+/* h1~h2{
+    color: red;
+    text-align: center;
+} */
+
+div{
+    /* padding: 5px; */
+    border: 5px solid black;
+    display: inline-block;
+    min-width: 70%;
+    min-height: 170px;
+}
+
+/* img+h1{
+    color: blue;
+} */
+
+
+img{
+    width: 50px;
+    position: absolute;
+    left: 10px;
+}
+#i1{
+    top: 10px;
+}
+
+#i2{
+    top: 60px;
+}
+
+
+#i3{
+    top: 130px;
+}

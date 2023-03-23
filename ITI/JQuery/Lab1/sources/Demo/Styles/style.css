@@ -1,0 +1,17 @@
+/* #myH{
+    color: chartreuse;
+} */
+
+/* ul li{
+    color: red;
+    background-color: blue;
+    margin: 2px;
+} */
+
+.myClass{
+    border: 5px solid blue;
+    text-align: center;
+    color: red;
+    background-color: yellow;
+    margin: 5px;
+}
