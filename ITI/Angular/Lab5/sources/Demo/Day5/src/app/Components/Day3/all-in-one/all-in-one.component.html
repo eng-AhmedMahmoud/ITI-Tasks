@@ -1,0 +1,55 @@
+<h1>Registeration</h1>
+<div class="form">
+  <!--Attribute Directive-->
+  <!--[ngClass]="cond?true:false"-->
+  <!--[ngStyle]="cond?true:false"-->
+
+  <!-- <input *ngIf="name.length<3" style="border: 2px solid red;" type="text" placeholder="Enter ur Name" [(ngModel)]="name"/>
+  <input *ngIf="name.length>=3" style="border: 2px solid greenyellow;" type="text" placeholder="Enter ur Name" [(ngModel)]="name"/> -->
+  <input type="text" placeholder="Enter ur Name" [(ngModel)]="name"/>
+  <div style="color: red; text-align: center" *ngIf="name.length < 3 && name">
+    <p>Name &gt; 3</p>
+  </div>
+  <input type="number" placeholder="Enter ur Age"[(ngModel)]="age"/>
+  <div *ngIf="age>30 then falseBlock else trueBlock">
+    <!-- <p>Age &lt; 30</p> -->
+  </div>
+  <ng-template #falseBlock>
+    <div style="color: red; text-align: center" *ngIf="age && age>=0">
+      <p>Age &lt; 30</p>
+    </div>
+  </ng-template>
+  <ng-template #trueBlock>
+    <div style="color: blueviolet; text-align: center" *ngIf="age==20; else trueBlockElse20">
+      ---------Welcome 20---------
+    </div>
+  </ng-template>
+  <ng-template #trueBlockElse20>
+    <div style="color: green; text-align: center" *ngIf="age">
+      Age Valid
+    </div>
+  </ng-template>
+  <!-- <div style="color: green; text-align: center" *ngIf="age<=30">
+    <p>Age Valid</p>
+  </div> -->
+  <input type="button" value="ADD" (click)="AddStudent()"/>
+</div>
+
+
+<h1>Students</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!--Directive-->
+    <tr *ngFor="let s of Students">
+      <td>{{s.name}}</td>
+      <td>{{s.age}}</td>
+      <!-- <td *ngIf="+s.age<=30 && +s.age > 0">{{s.age}}</td> -->
+    </tr>
+  </tbody>
+</table>

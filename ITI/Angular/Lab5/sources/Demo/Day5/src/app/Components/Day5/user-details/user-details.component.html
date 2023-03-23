@@ -1,0 +1,9 @@
+<div *ngIf="User; else falseBlock">
+  <p>Name: {{User.name}}</p>
+  <p>UserName: {{User.username}}</p>
+  <p>Email: {{User.email}}</p>
+  <p>Address: {{User.address.street}},{{User.address.city}}</p>
+</div>
+<ng-template #falseBlock>
+  <h1>Loading...</h1>
+</ng-template>

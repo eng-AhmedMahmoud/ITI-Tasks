@@ -1,0 +1,3 @@
+Day1 ==> Rest API [Arch] & Module
+Day2 ==> Validation [DTO] & MongoDB & Pipe & MiddleWares
+Day3 ==> Authentication & Autharization & JWT & Hash Passward & Guard

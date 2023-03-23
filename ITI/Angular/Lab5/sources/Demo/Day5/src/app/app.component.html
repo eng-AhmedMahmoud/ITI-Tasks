@@ -1,0 +1,77 @@
+<!-- <h1 style="color: brown;">Hiii</h1> -->
+<!-- <app-first></app-first> -->
+<!-- <app-second></app-second> -->
+
+<!--
+  Create New Component [ur Hand - command]
+  CSS
+  TS, Html
+-->
+
+
+<!--Day3-->
+<!-- <app-all-in-one></app-all-in-one> -->
+<!--Component Interaction-->
+
+<!-- <div>
+  <h1>Parent</h1>
+  <p class="alert alert-dark">Data: {{DataParent}}</p> -->
+
+  <!--From Parent To Child [Prop]="Parent"-->
+  <!-- <app-home [hamada]="DataFromLogin" [DataAly]="'Aly'"></app-home> -->
+  <!--From Child To Parent (event)="fun($event)"-->
+  <!-- <app-login (hamadaevent)="getData($event)"></app-login>
+
+  <p class="alert alert-danger">Data: {{DataFromLogin}}</p>
+</div> -->
+
+
+<!-- <input type="text" [value]="name"/> -->
+<!-- <input type="text" [value]="name" (input)="getData($event)"/> -->
+
+<!--Day4-->
+<!--1) Component Interaction-->
+<!-- <app-registeration (myEvent)="getInfo($event)"></app-registeration>
+<app-students [studentElem]="student" [name]="'Shrouk'"></app-students> -->
+<!-- <app-students [studentsArr]="students"></app-students> -->
+
+<!--2) Validation-->
+<!-- <app-validation-reactive-forms></app-validation-reactive-forms> -->
+
+<!--3) Routing-->
+<!-- <div class="alert alert-primary w-75 text-center mt-2 m-auto justify-content-center">
+  <app-header></app-header>
+</div>
+<div class="alert alert-info w-75 text-center mt-2 m-auto justify-content-center">
+  <router-outlet></router-outlet>
+</div> -->
+
+<!-- Day5 -->
+<!-- 1) Custom Directive -->
+<!-- <h1 [appCustom]="{fgColor:'yellow', bgColor:'blue'}">Hello</h1>
+<div [appCustom]="{fgColor:'white', bgColor:'green'}">
+  <app-error></app-error>
+</div> -->
+
+<!-- 2)Pipes -->
+<!-- <p>{{name}}</p>
+<p>{{name|uppercase}}</p>
+<p>{{name|lowercase}}</p>
+<p>{{salary}}</p>
+<p>{{salary|currency:"USD"}}</p>
+<p>{{salary|currency:"INR"}}</p>
+<p>{{salary|currency:"EGP"}}</p>
+<p>{{name|custom:"/"}}</p>
+<p>{{name|custom:"-"}}</p>
+<p>{{name|custom:"55":"77":"33"}}</p>
+<p>{{name|custom}}</p> -->
+
+
+<!-- Calling API & Routing -->
+<!-- Users - UserDatails - Header - Error -->
+<app-header></app-header>
+<div class="text-center w-75 m-auto alert alert-primary">
+  <router-outlet></router-outlet>
+</div>
+
+

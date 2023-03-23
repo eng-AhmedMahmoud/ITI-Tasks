@@ -1,0 +1,5 @@
+1- Directives
+2- Custom Directives
+3- Pipes
+4- Custom Pipe
+5- Angular ==> API [Fake - Fake Api Server - Node]

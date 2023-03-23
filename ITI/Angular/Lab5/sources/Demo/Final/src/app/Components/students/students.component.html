@@ -1,0 +1,5 @@
+<!-- <div *ngFor="let s of Students">
+  <p>Name: {{s.name}}</p>
+  <p>Email: {{s.email}}</p>
+</div> -->
+<app-student-item *ngFor="let s of Students" [student]="s"></app-student-item>

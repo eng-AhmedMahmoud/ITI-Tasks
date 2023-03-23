@@ -1,0 +1,46 @@
+{
+  "Students": [
+    {
+      "id": 1,
+      "name": "Ahmed",
+      "age": 20,
+      "email": "ahmed@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Aly",
+      "age": 22,
+      "email": "aly@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Sara",
+      "age": 23,
+      "email": "sara@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Samy",
+      "age": 25,
+      "email": "samy@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "Haitham",
+      "age": 28,
+      "email": "haitham@gmail.com"
+    },
+    {
+      "id": 6,
+      "name": "koko",
+      "age": 26,
+      "email": "koko@gmail.com"
+    },
+    {
+      "name": "ToTo",
+      "age": "30",
+      "email": "toto@gmail.com",
+      "id": 7
+    }
+  ]
+}

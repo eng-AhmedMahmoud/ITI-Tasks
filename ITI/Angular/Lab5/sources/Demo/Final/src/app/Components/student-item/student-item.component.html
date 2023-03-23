@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center align-items-center  alert alert-success">
+  <div class="d-block">
+    <p>{{student.name}}</p>
+    <p><a routerLink="/students/{{student.id}}">{{student.email}}</a></p>
+  </div>
+  <div class="d-block m-2">
+    <a class="btn btn-outline-success" routerLink="/update/{{student.id}}">Update</a>
+  </div>
+</div>
