@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "test": "mocha",
+    "delay": "npm run test -- --delay"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  },
+  "dependencies": {
+    "chai": "^4.3.7"
+  }
+}
