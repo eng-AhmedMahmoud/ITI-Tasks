@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind</title>
+  <link rel="stylesheet" href="../dist/output.css">
+</head>
+
+<body>
+  <!-- test div -->
+  <!-- <div class="bg-blue-600 md:bg-red-100 lg:bg-neutral-700">hi there</div> -->
+
+  <main class="container">
+    <section id="main-section"
+      class="grid grid-cols-12 grid-rows-1 mx-5 md:mx-0 lg:mx-0 gap-y-4 md:gap-y-0 lg:gap-y-0">
+      <div
+        class="lg:col-start-1 lg:col-span-4 md:col-start-1 md:col-span-6  col-span-12 row-start-2 md:row-start-1 lg:row-start-1 md:grid md:place-content-center md:mx-4">
+        <div class="text-center md:text-start lg:text-start md:ms-10">
+          <img class="mb-3 hidden md:block lg:block" src="./images/logo-brand.svg" alt="logo" width="200px"
+            height="100px">
+          <h1>you can wor k from anywhere</h1>
+          <h1 class="text-cyan-500 mb-3">take advantage of it.</h1>
+          <p class="mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque sunt at iusto, quo hic, earum
+            eligendi aperiam necessitating enim ipsam esse.</p>
+          <button class="text-white bg-cyan-500 rounded-md mb-3">Book your Escape</button>
+        </div>
+      </div>
+      <div class="lg:col-start-5 lg:col-span-8 md:col-start-7 md:col-span-12 col-span-12 overflow-hidden lg:h-96">
+        <img class="rounded-md md:rounded-none lg:rounded-none bg-center lg:scale-150" src="./images/beach-work.jpg"
+          alt="beach image">
+      </div>
+    </section>
+    <section id="details-section" class="md:px-5 pt-10 lg:m-auto bg-slate-200 lg:px-20 pb-60">
+      <div id="container" class="container px-5 md:px-0 lg:px-0 grid gap-y-5 lg:place-content-center">
+        <div id="details">
+          <h1><b>Popular destinations</b></h1>
+          <p>A selection of great work-friendly cities with lots to see and explore.</p>
+        </div>
+        <div id="cards"
+          class="grid gap-3 md:grid-rows-3 md:grid-cols-2 lg:grid-cols-3">
+          <div id="card"
+            class="rounded-md grid grid-cols-12 grid-rows-1  md:col-span-1 lg:col-start-1 lg:col-span-1 shadow-md bg-white">
+            <div class="col-start-1 col-span-4">
+              <img src="./images/toronto.jpg" alt="toronto">
+            </div>
+            <div class="col-start-5 col-span-8">
+              <h1><b>Toronto</b></h1>
+              <p class="mb-3">$ 120 / night average</p>
+              <b class="text-cyan-600">Explore 76 properties</b>
+            </div>
+          </div>
+          <div id="card"
+            class="grid grid-cols-12 grid-rows-1 md:col-span-1 lg:col-start-2 lg:col-span-1 shadow-md bg-white">
+            <div class="col-start-1 col-span-4">
+              <img src="./images/toronto.jpg" alt="toronto">
+            </div>
+            <div class="col-start-5 col-span-8">
+              <h1><b>Toronto</b></h1>
+              <p class="mb-3">$ 120 / night average</p>
+              <b class="text-cyan-600">Explore 76 properties</b>
+            </div>
+          </div>
+          <div id="card"
+            class="grid grid-cols-12 grid-rows-1 md:col-span-1 lg:col-start-3 lg:col-span-1 shadow-md bg-white">
+            <div class="col-start-1 col-span-4">
+              <img src="./images/toronto.jpg" alt="toronto">
+            </div>
+            <div class="col-start-5 col-span-8">
+              <h1><b>Toronto</b></h1>
+              <p class="mb-3">$ 120 / night average</p>
+              <b class="text-cyan-600">Explore 76 properties</b>
+            </div>
+          </div>
+          <div id="card" class="grid grid-cols-12 grid-rows-1 md:col-span-1 lg:col-span-1 shadow-md bg-white">
+            <div class="col-start-1 col-span-4">
+              <img src="./images/toronto.jpg" alt="toronto">
+            </div>
+            <div class="col-start-5 col-span-8">
+              <h1><b>Toronto</b></h1>
+              <p class="mb-3">$ 120 / night average</p>
+              <b class="text-cyan-600">Explore 76 properties</b>
+            </div>
+          </div>
+          <div id="card" class="grid grid-cols-12 grid-rows-1 md:col-span-1 lg:col-span-1 shadow-md bg-white">
+            <div class="col-start-1 col-span-4">
+              <img src="./images/toronto.jpg" alt="toronto">
+            </div>
+            <div class="col-start-5 col-span-8">
+              <h1><b>Toronto</b></h1>
+              <p class="mb-3">$ 120 / night average</p>
+              <b class="text-cyan-600">Explore 76 properties</b>
+            </div>
+          </div>
+          <div id="card" class="grid grid-cols-12 grid-rows-1 md:col-span-1 lg:col-span-1 shadow-md bg-white">
+            <div class="col-start-1 col-span-4">
+              <img src="./images/toronto.jpg" alt="toronto">
+            </div>
+            <div class="col-start-5 col-span-8">
+              <h1><b>Toronto</b></h1>
+              <p class="mb-3">$ 120 / night average</p>
+              <b class="text-cyan-600">Explore 76 properties</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
