@@ -1,0 +1,197 @@
+{
+  "movies": [
+    {
+      "adult": false,
+      "backdrop_path": "/qmEKe0AEsns2WXinbkGxlCxlTHq.jpg",
+      "id": 493529,
+      "title": "Dungeons & Dragons: Honor Among Thieves",
+      "original_language": "en",
+      "original_title": "Dungeons & Dragons: Honor Among Thieves",
+      "overview": "A charming thief and a band of unlikely adventurers undertake an epic heist to retrieve a lost relic, but things go dangerously awry when they run afoul of the wrong people.",
+      "poster_path": "/6LuXaihVIoJ5FeSiFb7CZMtU7du.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        12,
+        14,
+        35
+      ],
+      "popularity": 412.073,
+      "release_date": "2023-03-24",
+      "video": false,
+      "vote_average": 7.724,
+      "vote_count": 38
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/98Hak5vgStHNrQ90ZfDiHSto1hV.jpg",
+      "id": 845659,
+      "title": "Perfect Addiction",
+      "original_language": "en",
+      "original_title": "Perfect Addiction",
+      "overview": "A female boxing trainer discovers that her champion cage-fighter boyfriend has been cheating on her with her sister and decides to seek revenge by training up his arch-rival to challenge him.",
+      "poster_path": "/3wkrRKMFRwCpjp1U27914oRbcqH.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        18,
+        10749,
+        28
+      ],
+      "popularity": 802.067,
+      "release_date": "2023-02-16",
+      "video": false,
+      "vote_average": 6.408,
+      "vote_count": 38
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/f1PSBBNYKuCjubTgHwFkPr5SidC.jpg",
+      "id": 502356,
+      "title": "The Super Mario Bros. Movie",
+      "original_language": "en",
+      "original_title": "The Super Mario Bros. Movie",
+      "overview": "While working underground to fix a water main, Brooklyn plumbers—and brothers—Mario and Luigi are transported down a mysterious pipe and wander into a magical new world. But when the brothers are separated, Mario embarks on an epic quest to find Luigi.",
+      "poster_path": "/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        16,
+        12,
+        10751,
+        14
+      ],
+      "popularity": 876.478,
+      "release_date": "2023-03-30",
+      "video": false,
+      "vote_average": {
+        "value": "7.0n",
+        "type": "Big Number"
+      },
+      "vote_count": 7
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/98Hak5vgStHNrQ90ZfDiHSto1hV.jpg",
+      "id": 845659,
+      "title": "Perfect Addiction",
+      "original_language": "en",
+      "original_title": "Perfect Addiction",
+      "overview": "A female boxing trainer discovers that her champion cage-fighter boyfriend has been cheating on her with her sister and decides to seek revenge by training up his arch-rival to challenge him.",
+      "poster_path": "/3wkrRKMFRwCpjp1U27914oRbcqH.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        18,
+        10749,
+        28
+      ],
+      "popularity": 802.067,
+      "release_date": "2023-02-16",
+      "video": false,
+      "vote_average": 6.408,
+      "vote_count": 38
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/xw383myGoydmJyL2yzFj0tVljll.jpg",
+      "id": 545611,
+      "title": "Everything Everywhere All at Once",
+      "original_language": "en",
+      "original_title": "Everything Everywhere All at Once",
+      "overview": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save what's important to her by connecting with the lives she could have led in other universes.",
+      "poster_path": "/w3LxiVYdWWRvEVdn5RYq6jIqkb1.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "popularity": 249.478,
+      "release_date": "2022-03-24",
+      "video": false,
+      "vote_average": 7.887,
+      "vote_count": 4181
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/r17jFHAemzcWPPtoO0UxjIX0xas.jpg",
+      "id": 324552,
+      "title": "John Wick: Chapter 2",
+      "original_language": "en",
+      "original_title": "John Wick: Chapter 2",
+      "overview": "John Wick is forced out of retirement by a former associate looking to seize control of a shadowy international assassins’ guild. Bound by a blood oath to aid him, Wick travels to Rome and does battle against some of the world’s most dangerous killers.",
+      "poster_path": "/hXWBc0ioZP3cN4zCu6SN3YHXZVO.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        28,
+        53,
+        80
+      ],
+      "popularity": 894.616,
+      "release_date": "2017-02-08",
+      "video": false,
+      "vote_average": 7.302,
+      "vote_count": 11169
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9Rq14Eyrf7Tu1xk0Pl7VcNbNh1n.jpg",
+      "id": 646389,
+      "title": "Plane",
+      "original_language": "en",
+      "original_title": "Plane",
+      "overview": "After a heroic job of successfully landing his storm-damaged aircraft in a war zone, a fearless pilot finds himself between the agendas of multiple militias planning to take the plane and its passengers hostage.",
+      "poster_path": "/qi9r5xBgcc9KTxlOLjssEbDgO0J.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        28,
+        12,
+        53
+      ],
+      "popularity": 1001.16,
+      "release_date": "2023-01-12",
+      "video": false,
+      "vote_average": 6.853,
+      "vote_count": 978
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/vBmmJYv5asJpdJZsyPPc4MMpfBe.jpg",
+      "id": 1018228,
+      "title": "Chor Nikal Ke Bhaga",
+      "original_language": "hi",
+      "original_title": "चोर निकल के भागा",
+      "overview": "A flight attendant and her boyfriend must steal a cache of diamonds to clear an old debt — but the plan spins into a mayhem when the plane gets hijacked.",
+      "poster_path": "/1MIDERaEUMw1rYDM99tGZPY80Ap.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        80,
+        53
+      ],
+      "popularity": 99.949,
+      "release_date": "2023-03-24",
+      "video": false,
+      "vote_average": 7.5,
+      "vote_count": 35
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ceYZCBfwbBwSpGJ6PapNVw5jqLG.jpg",
+      "id": 916224,
+      "title": "Suzume",
+      "original_language": "ja",
+      "original_title": "すずめの戸締まり",
+      "overview": "Suzume, 17, lost her mother as a little girl. On her way to school, she meets a mysterious young man. But her curiosity unleashes a calamity that endangers the entire population of Japan, and so Suzume embarks on a journey to set things right.",
+      "poster_path": "/x5CrIflmv8WZJeLv7V611aRGbPs.jpg",
+      "media_type": "movie",
+      "genre_ids": [
+        16,
+        18,
+        12,
+        14
+      ],
+      "popularity": 329.434,
+      "release_date": "2022-11-11",
+      "video": false,
+      "vote_average": 8.1,
+      "vote_count": 38
+    }
+  ]
+}
