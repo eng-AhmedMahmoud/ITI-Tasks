@@ -1,0 +1,13 @@
+student { stdId , name , email , address, trackID(FK) }
+
+phone{ stdId, phonenumber} pk composite
+
+subject { subId, desc, name, maxScore}
+
+track { trackId , name}
+
+subjectTrack { trackId (FK), subId (FK)} pk composite
+
+exam{examId , date}
+
+studentExam{ studentId (FK), subId (FK) , examId (FK) ,score } pk( studentId , subId)
