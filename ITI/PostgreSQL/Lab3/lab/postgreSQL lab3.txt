@@ -1,0 +1,41 @@
+1:
+CREATE VIEW track_subjects AS SELECT track.name AS track_name, subject.name AS subject_name FROM track_subject INNER JOIN track ON track_subject.track_id = track.track_id INNER JOIN subject ON track_subject.subject_id = subject.subject_id;
+
+2:
+CREATE VIEW student_subjects AS SELECT CONCAT_WS(' ', first_name, last_name) AS full_name, subject.name AS subject_name FROM student_subject INNER JOIN student ON student_subject.student_id = student.student_id INNER JOIN subject ON student_subject.subject_id = subject.subject_id;
+
+3:
+CREATE VIEW student_scores AS SELECT CONCAT_WS(' ', first_name, last_name) AS full_name, subject.name AS subject_name, exam.score, TO_CHAR(exam.exam_date, 'DD Month YYYY') AS exam_date FROM exam INNER JOIN student ON exam.student_id = student.student_id INNER JOIN subject ON exam.subject_id = subject.subject_id;
+
+4:
+CREATE TEMPORARY VIEW max_scores AS SELECT subject_id, MAX(score) AS max_score FROM exam GROUP BY subject_id;
+
+5:
+CREATE USER new_user WITH PASSWORD 'password';
+GRANT ALL PRIVILEGES ON DATABASE your_database TO new_user;
+
+6:
+done in hba_config file
+host    all             myuser          127.0.0.1/32            scram-sha-256
+
+7:
+SELECT to_char(exam_date, 'DD Mon YYYY') FROM Exam;
+
+8:
+SELECT first_name, EXTRACT(YEAR FROM age(birth_date)) FROM Student;
+
+9:
+SELECT Student.first_name, ROUND(AVG(Exam.score)) AS rounded_score, Subject.name FROM Student INNER JOIN Exam ON Student.student_id = Exam.student_id INNER JOIN Subject ON Exam.subject_id = Subject.subject_id GROUP BY Student.first_name, Subject.name;
+
+10:
+SELECT first_name, EXTRACT(YEAR FROM birth_date) AS birth_year FROM Student;
+
+11:
+INSERT INTO Exam (student_id, subject_id, score, exam_date) VALUES (1, 1, 85, NOW());
+
+12:
+CREATE DATABASE ITI;
+CREATE SCHEMA schema1; 
+CREATE TABLE schema1.table1 ( id SERIAL PRIMARY KEY,  name VARCHAR(50) );  
+CREATE SCHEMA schema2; 
+CREATE TABLE schema2.table2 (  id SERIAL PRIMARY KEY,  description TEXT );
