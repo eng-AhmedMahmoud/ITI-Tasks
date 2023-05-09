@@ -1,0 +1,109 @@
+1:
+CREATE TABLE Deleted_Students (  student_id SERIAL PRIMARY KEY,  track_id INTEGER,  gender text,  birth_date DATE,  first_name VARCHAR(50),  last_name VARCHAR(50),  contact_info VARCHAR(100) );
+
+2:
+CREATE OR REPLACE FUNCTION save_deleted_student()
+RETURNS TRIGGER AS $$
+BEGIN
+    INSERT INTO Deleted_Students (track_id, gender, birth_date, first_name, last_name, contact_info)
+    VALUES (OLD.track_id, OLD.gender, OLD.birth_date, OLD.first_name, OLD.last_name, OLD.contact_info);
+    RETURN OLD;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_deleted_student
+AFTER DELETE ON Student
+FOR EACH ROW
+EXECUTE FUNCTION save_deleted_student();
+
+3:
+DELETE FROM Student WHERE student_id = 1;
+SELECT * FROM Deleted_Students WHERE student_id = 1;
+
+4:
+CREATE OR REPLACE FUNCTION check_course_name_length()
+RETURNS TRIGGER AS $$
+BEGIN
+    IF LENGTH(NEW.course_name) > 20 THEN
+        RAISE EXCEPTION 'Course name cannot be longer than 20 characters';
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_course_name_length
+BEFORE INSERT ON Course
+FOR EACH ROW
+EXECUTE FUNCTION check_course_name_length();
+
+5:
+CREATE OR REPLACE FUNCTION check_student_name_update()
+RETURNS TRIGGER AS $$
+BEGIN
+    IF OLD.first_name != NEW.first_name OR OLD.last_name != NEW.last_name THEN
+        RAISE EXCEPTION 'Updating student names is not allowed';
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_student_name_update
+BEFORE UPDATE ON Student
+FOR EACH ROW
+EXECUTE FUNCTION check_student_name_update();
+
+6:
+CREATE OR REPLACE FUNCTION check_student_grade_update()
+RETURNS TRIGGER AS $$
+BEGIN
+    IF OLD.score != NEW.score THEN
+        RAISE EXCEPTION 'Updating student grades is not allowed';
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_student_grade_update
+BEFORE UPDATE ON Exam
+FOR EACH ROW
+EXECUTE FUNCTION check_student_grade_update();
+
+7:
+CREATE OR REPLACE FUNCTION check_exam_score()
+RETURNS TRIGGER AS $$
+BEGIN
+    IF NEW.score > 100 OR NEW.score < 0 THEN
+        RAISE EXCEPTION 'Exam score must be between 0 and 100';
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_exam_score
+BEFORE INSERT OR UPDATE ON Exam
+FOR EACH ROW
+EXECUTE FUNCTION check_exam_score();
+
+8:
+CREATE OR REPLACE FUNCTION block_operations_after_7pm()
+  RETURNS TRIGGER AS $$
+  BEGIN
+    IF extract(hour from current_time) > 19 THEN
+      RAISE EXCEPTION 'Operations not allowed after 7:00 PM';
+    END IF;
+    RETURN NEW;
+  END;
+  $$ LANGUAGE plpgsql;
+  
+CREATE TRIGGER block_operations
+  BEFORE INSERT OR UPDATE OR DELETE
+  ON ALL TABLES
+  FOR EACH ROW
+  EXECUTE FUNCTION block_operations_after_7pm();
+
+9:
+pg_dump -h localhost -U postgres -p 5432 iti > dd.dump
+
+10:
+COPY student FROM 'd:/dd.dump';
+COPY student TO 'd:/dd.dump';
