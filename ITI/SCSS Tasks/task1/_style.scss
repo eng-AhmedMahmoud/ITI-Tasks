@@ -225,3 +225,7 @@ $sizee:100px;
     display: flex;
     flex-wrap: wrap;
 }
+
+// @import
+// @use // name-spacing and file scooped
+// @forward // collect all @use in _index.scss and import it in main file with @use
